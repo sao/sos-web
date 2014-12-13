@@ -1,0 +1,306 @@
+$icon-font-path: "../fonts/"; // Change the path to the fonts
+@import "../css/bootstrap";
+
+.font-alternate {
+  font-family: "alternate-gothic-no-1-d";
+  font-weight: 400;
+}
+
+.font-franklin {
+  font-family: "franklin-gothic-urw-cond";
+  font-weight: 700;
+}
+
+/* Put your CSS here */
+html, body {
+  font-size: 18px;
+  font-family: Georgia;
+  text-align: center;
+}
+
+a {
+  color: #BC4A4A;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    color: #BC4A4A;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1px solid #BC4A4A;
+  }
+}
+
+p {
+  line-height: 2;
+}
+
+header {
+  background: #3E4D5C url("../images/header_photo.png") top center no-repeat;
+  min-height: 800px;
+}
+
+
+#logo {
+  h1 a {
+    @extend .text-hide;
+    display: block;
+    background: url("../images/logo.svg") no-repeat;
+    background-size: 100%;
+    width: 147px;
+    height: 106px;
+  }
+}
+
+.navbar-toggle {
+  background: #28313C;
+  border-color: #626F7B;
+  margin-top: 70px;
+  .icon-bar {
+    background: #626F7B;
+  }
+}
+
+.navbar-brand {
+  height: auto;
+}
+
+.navbar-collapse {
+  box-shadow: none;
+  border: 0;
+  ul {
+    @extend .pull-right;
+    margin-top: 60px;
+    li {
+      a {
+        @extend .btn, .font-franklin;
+        color: #FFF;
+        font-size: 24px;
+        padding: 10px 20px;
+        &:hover {
+          background: #BC4A4A;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+#motto {
+  @extend .font-alternate;
+  color: #FFF;
+  text-align: center;
+  margin-top: 160px;
+
+  h2 {
+    font-size: 120px;
+    text-transform: uppercase;
+  }
+
+  a.why-work {
+    @extend .btn, .font-franklin;
+    color: #FFF;
+    border-color: #BC4A4A;
+    background: #BC4A4A;
+    font-size: 28px;
+    padding: 10px 40px;
+    &:hover {
+      color: #FFF;
+      background: #A73333;
+      border-color: #A73333;
+    }
+  }
+}
+
+main {
+  margin-bottom: 80px;
+
+  h3, h4 {
+    @extend .font-alternate;
+    text-transform: uppercase;
+  }
+  h3.welcome, h3.contact {
+    font-size: 48px;
+    margin: 80px 0 40px;
+  }
+
+  h3.contact {
+    text-align: left;
+  }
+
+  h4 {
+    color: #BC4A4A;
+    font-size: 36px;
+    margin: 40px 0 20px;
+  }
+
+  a.work-with-you {
+    display: inline-block;
+    margin: 20px 0 80px;
+  }
+
+  .column {
+    p {
+      @extend .col-lg-10, .col-lg-offset-1, .col-sm-12;
+    }
+  }
+
+  .location {
+    margin-bottom: 80px;
+  }
+
+  .inside-column {
+    text-align: left;
+
+    img {
+      margin-top: 80px;
+      float: right;
+    }
+
+  }
+}
+
+.employment-apps {
+  text-align: center !important;
+  font-size: 14px;
+  .pdf-container {
+    margin-top: 80px;
+  }
+
+  .pdf {
+    margin: 0 auto 20px;
+  }
+}
+
+.pdf {
+  background: url("../images/pdf-red.png") no-repeat;
+  display: block;
+  width: 66px;
+  height: 81px;
+}
+
+nav#secondary {
+  background: #F0F0F0;
+
+  ul {
+    margin: 0;
+
+    li {
+      @extend .font-franklin;
+      display: inline-block;
+      font-weight: 300;
+      text-transform: uppercase;
+      margin: 0 20px;
+      a {
+        display: block;
+        color: #A5A5A5;
+        padding: 20px;
+        &:hover {
+          border: none;
+          background: #F8F8F8;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: #C4C4C4;
+  padding: 20px 0 80px;
+
+  .contact-info {
+    @extend .font-franklin;
+    color: #858585;
+    font-size: 24px;
+    li {
+      display: inline-block;
+      margin: 0 20px;
+      a {
+        color: inherit;
+        &:hover {
+          border: none;
+          color: #666;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: #969696;
+  }
+}
+
+@media (max-width: $screen-md) {
+}
+
+@media (max-width: $screen-sm) {
+  header {
+    min-height: 400px;
+  }
+
+  .navbar-collapse {
+    padding: 0;
+    ul {
+      background: #3E4D5C;
+      float: none !important;
+      margin: 0;
+      padding: 20px;
+      li {
+        a {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #motto {
+    margin-top: 30px;
+
+    h2 {
+      font-size: 32px;
+    }
+
+    a.why-work {
+      font-size: 18px;
+      padding: 10px 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .column {
+    margin-bottom: 80px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .inside-column {
+    img {
+      display: none;
+    }
+  }
+
+  nav#secondary {
+    ul {
+      padding: 0;
+
+      li {
+        display: block;
+        margin: 0;
+      }
+    }
+  }
+
+  footer {
+    ul {
+      padding: 0;
+      li {
+        display: block !important;
+      }
+    }
+  }
+}
