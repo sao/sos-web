@@ -160,6 +160,25 @@ main {
   }
 }
 
+.contact-container {
+  margin-bottom: 40px;
+}
+
+.employees-last {
+  margin-top: 40px;
+}
+
+.employees, .employees-last {
+
+  p {
+    text-align: left;
+  }
+
+  strong {
+    display: block;
+  }
+}
+
 .employment-apps {
   text-align: center !important;
   font-size: 14px;
